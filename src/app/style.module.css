@@ -1,0 +1,32 @@
+.container {
+  composes: container from global;
+  text-align: center;
+  gap: 30px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.title1 {
+  color: var(--second);
+}
+
+.title2 {
+  color: var(--third);
+}
+
+.subtitles {
+  font-size: 12px;
+}
+
+.button {
+  font-size: 12px;
+  color: var(--first);
+  background-color: var(--third);
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+}
