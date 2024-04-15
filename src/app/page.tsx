@@ -1,7 +1,16 @@
+"use client"
+
 import Image from "next/image";
 import styles from "./style.module.css";
+import Button from "@/component/Button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter()
+  const handleGoToSignInPage = () => [
+    router.push("/signIn")
+  ]
+
   return (
     <main className={styles.container}>
       <Image
@@ -23,7 +32,7 @@ export default function Home() {
         <p>Coffee Bean</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, necessitatibus atque consequuntur eius impedit vel maxime, corporis id aliquam cum qui, maiores ipsum tempora a labore amet ab aut dolorem.</p>
       </div>
-      <button className={styles.button}>Get Started</button>
+      <Button onClick={handleGoToSignInPage}>Get Started</Button>
     </main>
   );
 }

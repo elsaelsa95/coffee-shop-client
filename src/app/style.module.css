@@ -20,13 +20,3 @@
 .subtitles {
   font-size: 12px;
 }
-
-.button {
-  font-size: 12px;
-  color: var(--first);
-  background-color: var(--third);
-  width: 50%;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-}

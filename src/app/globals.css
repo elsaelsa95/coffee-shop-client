@@ -4,6 +4,7 @@
   --first: #000;
   --second: #f2f1d3;
   --third: #dd5d00;
+  --white: #fff;
 }
 
 * {
@@ -30,6 +31,7 @@ main {
   justify-content: center;
   margin: auto;
   padding: 0px 25px 50px 25px;
+  position: relative;
   background-color: var(--first);
   color: var(--second);
 }

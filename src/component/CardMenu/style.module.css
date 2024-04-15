@@ -1,0 +1,54 @@
+.border {
+  width: 20em;
+  height: 6.5em;
+  display: flex;
+  flex-direction: row;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 10px 10px 5px lightgray;
+}
+
+.image {
+  height: auto;
+  width: 10em;
+}
+
+.card {
+  border: none;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  background-color: var(--white);
+  width: 100%;
+}
+
+.top,
+.rating,
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating {
+  color: var(--third);
+}
+
+.heart {
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 5px;
+  background-color: var(--third);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}

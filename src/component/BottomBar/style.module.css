@@ -1,0 +1,18 @@
+.navigationItems {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 10px;
+}
+
+.navigationItems a[data-is-active="true"] {
+  color: var(--third);
+}
+
+.navigationItems a[data-is-active="false"] {
+  color: var(--first);
+}

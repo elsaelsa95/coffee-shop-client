@@ -1,0 +1,54 @@
+.container {
+  composes: container from global;
+  background-color: var(--white);
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.top {
+  width: 100%;
+  min-height: 35vh;
+  padding: 50px;
+  background-color: var(--first);
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  padding: 30px 0 0 0;
+}
+
+.subtitle {
+  font-size: 10px;
+  color: var(--white);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5%;
+  margin-top: 10%;
+  padding: 25px 50px;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 23vh;
+  left: 50px;
+  gap: 25px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px;
+  gap: 25px;
+  max-height: 25em;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
