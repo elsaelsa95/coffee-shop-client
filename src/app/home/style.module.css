@@ -8,8 +8,8 @@
 
 .top {
   width: 100%;
-  min-height: 35vh;
-  padding: 50px;
+  min-height: 20vh;
+  padding: 25px;
   background-color: var(--first);
 }
 
@@ -30,25 +30,45 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 5%;
-  margin-top: 10%;
-  padding: 25px 50px;
+  width: 100%;
+  padding: 25px 0px 5px 25px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
-.middle {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 23vh;
-  left: 50px;
-  gap: 25px;
+.buttonGroup::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.buttonList {
+  background-color: var(--white);
+  min-width: 10em;
+  height: 2.5em;
+  border-radius: 1em;
+  border: 0.1px solid lightgray;
+}
+
+.buttonList:focus {
+  color: var(--white);
+  background-color: var(--third);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  padding: 0px 50px;
+  width: 100%;
+  padding: 0px 30px;
+  margin-bottom: auto;
   gap: 25px;
-  max-height: 25em;
-  overflow-y: scroll;
+  max-height: 65vh;
+  overflow-y: auto;
   scrollbar-width: none;
+}
+
+@media only screen and (max-height: 700px) {
+  .list {
+    max-height: 55vh;
+  }
 }

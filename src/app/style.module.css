@@ -2,6 +2,8 @@
   composes: container from global;
   text-align: center;
   gap: 30px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .title {

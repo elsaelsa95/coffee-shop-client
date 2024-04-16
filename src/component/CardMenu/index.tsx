@@ -24,19 +24,17 @@ export default function CardMenu() {
             <Card className={style.card}>
                 <div>
                     <div className={style.top}>
+                        <div className={style.rating}>
+                            <small>
+                                Rating this drink 4.5 <FontAwesomeIcon icon={faStar} />
+                            </small>
+                        </div>
+                    </div>
+                    <div className={style.bottom}>
                         <div>
                             <p><strong>Espresso</strong></p>
                             <small>With Milk</small>
                         </div>
-                        <div className={style.rating}>
-                            <FontAwesomeIcon icon={faStar} /> 4.5
-                            <div className={style.heart}>
-                                <FontAwesomeIcon icon={faHeart} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.bottom}>
-                        <p>Rp 18000</p>
                         <Button className={style.button}><FontAwesomeIcon icon={faPlus} /></Button>
                     </div>
                 </div>

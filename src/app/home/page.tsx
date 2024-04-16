@@ -37,18 +37,15 @@ export default function Home() {
                 <div className={style.subtitle}>
                     Grab your first coffee in the morning
                 </div>
-                <div className={style.middle}>
-                    Today&apos;s Deal
-                    <CardMenu />
-                </div>
             </div>
             <div className={style.buttonGroup}>
-                <Button>Espresso</Button>
-                <Button>Cappuccino</Button>
-                <Button>Frappuccino</Button>
-                <Button>Latte</Button>
+                <Button className={style.buttonList}>Espresso</Button>
+                <Button className={style.buttonList}>Cappuccino</Button>
+                <Button className={style.buttonList}>Frappuccino</Button>
+                <Button className={style.buttonList}>Latte</Button>
             </div>
             <div className={style.list}>
+                <CardMenu />
                 <CardMenu />
                 <CardMenu />
                 <CardMenu />
