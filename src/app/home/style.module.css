@@ -56,11 +56,10 @@
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  padding: 0px 30px;
-  margin-bottom: auto;
+  padding: 0px 30px 15px;
   gap: 25px;
   max-height: 65vh;
   overflow-y: auto;

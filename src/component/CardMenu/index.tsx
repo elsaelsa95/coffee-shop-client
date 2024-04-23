@@ -1,7 +1,7 @@
 import Card from "../Card";
 import style from "./style.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Button";
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ export default function CardMenu() {
                     style={{
                         width: "100%",
                         height: "auto",
-                        borderBottomLeftRadius: "20px",
+                        borderRadius: "20px"
                     }}
                 />
             </div>
