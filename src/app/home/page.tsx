@@ -2,17 +2,45 @@
 
 import BottomBar from "@/component/BottomBar";
 import style from "./style.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "@/component/Form";
 import Button from "@/component/Button";
 import CardMenu from "@/component/CardMenu";
+import { DataCoffee } from "@/data/coffee";
+import { ICoffee } from "@/interfaces/Coffee";
 
 export default function Home() {
-    const [text, setText] = useState("");
+    const [data, setData] = useState<ICoffee[]>([])
 
-    const handleSearch = (e: any) => {
-        console.log(e)
+    const [text, setText] = useState("");
+    const [dataFilter, setDataFilter] = useState("")
+
+    const handleSearch = (e: string) => {
+        setText(e)
     };
+
+    const buttonFilter = ["All", "Espresso", "Cappucino", "Frappucino", "Latte"]
+    const filter = (e: string) => {
+        setDataFilter(e)
+    }
+
+    useEffect(() => {
+        if (text == "") {
+            setData(DataCoffee)
+        }
+        else {
+            setData(DataCoffee.filter((c: any) => c.itemName.toLowerCase().includes(text) || c.category.toLowerCase().includes(text)))
+        }
+    }, [text])
+
+    useEffect(() => {
+        if (dataFilter == "All" || dataFilter == "") {
+            setData(DataCoffee)
+        } else {
+            setData(DataCoffee.filter((d) => d.category == dataFilter))
+        }
+    }, [dataFilter])
+
     return (
         <main className={style.container}>
             <div className={style.top}>
@@ -39,17 +67,25 @@ export default function Home() {
                 </div>
             </div>
             <div className={style.buttonGroup}>
-                <Button className={style.buttonList}>Espresso</Button>
-                <Button className={style.buttonList}>Cappuccino</Button>
-                <Button className={style.buttonList}>Frappuccino</Button>
-                <Button className={style.buttonList}>Latte</Button>
+                {buttonFilter.map((b) => {
+                    return (
+                        <Button className={style.buttonList} onClick={() => filter(b)} key={b}>{b}</Button>
+                    )
+                })}
             </div>
             <div className={style.list}>
-                <CardMenu />
-                <CardMenu />
-                <CardMenu />
-                <CardMenu />
-                <CardMenu />
+                {data.map((c) => {
+                    return (
+                        <CardMenu
+                            key={c.id}
+                            id={c.id}
+                            image={c.image}
+                            rating={c.rating}
+                            name={c.itemName}
+                            description={c.description}
+                        />
+                    )
+                })}
             </div>
             <BottomBar />
         </main>

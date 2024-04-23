@@ -4,13 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-export default function CardMenu() {
+export interface ICardMenu {
+    id: string;
+    image: string;
+    rating: number;
+    name: string;
+    description: string
+}
+export default function CardMenu({ id, image, rating, name, description }: ICardMenu) {
+    const router = useRouter()
+    const detail = () => {
+        router.push(`home/${id}`)
+    }
+
     return (
         <div className={style.border}>
             <div className={style.image}>
                 <Image
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU"
+                    src={image}
                     width={1000}
                     height={1000}
                     alt="image"
@@ -26,16 +39,16 @@ export default function CardMenu() {
                     <div className={style.top}>
                         <div className={style.rating}>
                             <small>
-                                Rating this drink 4.5 <FontAwesomeIcon icon={faStar} />
+                                Rating this drink {rating} <FontAwesomeIcon icon={faStar} />
                             </small>
                         </div>
                     </div>
                     <div className={style.bottom}>
                         <div>
-                            <p><strong>Espresso</strong></p>
-                            <small>With Milk</small>
+                            <p><strong>{name}</strong></p>
+                            <small>{description}</small>
                         </div>
-                        <Button className={style.button}><FontAwesomeIcon icon={faPlus} /></Button>
+                        <Button className={style.button} onClick={() => detail()}><FontAwesomeIcon icon={faPlus} /></Button>
                     </div>
                 </div>
             </Card>
