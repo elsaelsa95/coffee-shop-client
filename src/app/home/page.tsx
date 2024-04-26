@@ -82,7 +82,7 @@ export default function Home() {
                             image={c.image}
                             rating={c.rating}
                             name={c.itemName}
-                            description={c.description}
+                            description={c.topping}
                         />
                     )
                 })}

@@ -13,6 +13,7 @@
   padding: 1em;
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 0.5em;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -27,6 +28,7 @@
   justify-content: space-between;
   align-items: centers;
 }
+
 .subtitle {
   color: var(--grey);
 }
@@ -35,6 +37,24 @@
 .price {
   display: flex;
   flex-direction: row;
+  color: var(--third);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.readmore {
+  background-color: var(--white);
+  border: none;
+  display: block;
+  cursor: pointer;
   color: var(--third);
 }
 
@@ -94,4 +114,16 @@
   box-shadow: 0 0 2px 2px lightgray;
   position: absolute;
   bottom: -1%;
+}
+
+@media only screen and (max-height: 700px) {
+  .top {
+    max-height: 15vh;
+  }
+
+  .add {
+    bottom: -1%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
 }

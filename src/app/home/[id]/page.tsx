@@ -3,7 +3,6 @@
 import { useParams } from "next/navigation";
 import style from "./style.module.css";
 import { DataCoffee } from "@/data/coffee";
-import CardMenu from "@/component/CardMenu";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -34,33 +33,37 @@ export default function Detail() {
                             <p><strong>{detail.itemName}</strong></p>
                             <FontAwesomeIcon icon={faHeart} />
                         </div>
-                        <small className={style.subtitle}>{detail.description}</small>
+                        <small className={style.subtitle}>{detail.topping}</small>
                         <small className={style.rating}>
                             <FontAwesomeIcon icon={faStar} /> <p className={style.subtitle}>{detail.rating} (530)</p>
                         </small>
-                        <small><strong>Description</strong></small>
-                        <small className={style.subtitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odit sit aliquid dolor nobis explicabo debitis repellendus placeat velit cum unde suscipit temporibus maxime provident, blanditiis iusto ullam ab repudiandae modi nihil aliquam facilis doloremque ducimus totam. Ducimus itaque inventore mollitia aliquid, laborum iure temporibus laudantium ea, assumenda exercitationem quis?</small>
-                        <div className={style.quantity}>
-                            <small><strong>Quantity</strong></small>
+                        <section className={style.top}>
+                            <small><strong>Description</strong></small>
+                            <small className={style.subtitle}>{detail.description}</small>
+                        </section>
+                        <section className={style.bottom}>
                             <div className={style.quantity}>
-                                <Button className={style.button}>-</Button>
-                                <small>1</small>
-                                <Button className={style.button}>+</Button>
+                                <small><strong>Quantity</strong></small>
+                                <div className={style.quantity}>
+                                    <Button className={style.button}>-</Button>
+                                    <small>1</small>
+                                    <Button className={style.button}>+</Button>
+                                </div>
                             </div>
-                        </div>
-                        <small><strong>Size</strong></small>
-                        <div className={style.size}>
-                            {buttonSize.map((b) => {
-                                return (
-                                    <Button className={style.buttonList} key={b}>{b}</Button>
-                                )
-                            })}
-                        </div>
+                            <small><strong>Size</strong></small>
+                            <div className={style.size}>
+                                {buttonSize.map((b) => {
+                                    return (
+                                        <Button className={style.buttonList} key={b}>{b}</Button>
+                                    )
+                                })}
+                            </div>
+                        </section>
                     </div>
                     <div className={style.add}>
                         <div>
                             <small className={style.subtitle}>Price</small>
-                            <p className={style.price}>$ 4.56</p>
+                            <p className={style.price}>$ {detail.price}</p>
                         </div>
                         <Button>Add to cart</Button>
                     </div>
