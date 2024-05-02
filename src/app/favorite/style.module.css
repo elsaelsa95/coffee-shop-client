@@ -1,0 +1,40 @@
+.container {
+  composes: container from global;
+  background-color: var(--white);
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.backBar {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--first);
+}
+
+.title {
+  color: var(--white);
+}
+
+.backButton {
+  width: 5em;
+  height: 2em;
+  border-radius: 1em;
+  background-color: var(--white);
+}
+
+.backButton:hover {
+  background-color: var(--third);
+}
+
+.favorite {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  align-self: center;
+}
