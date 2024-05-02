@@ -64,6 +64,7 @@
   justify-content: space-between;
   gap: 1em;
   align-items: center;
+  margin-top: 0.3em;
 }
 
 .button {
@@ -89,14 +90,18 @@
 }
 
 .buttonList {
-  background-color: var(--white);
   width: 9em;
   height: 2.5em;
   border-radius: 1em;
   border: 0.1px solid lightgray;
+  background-color: var(--white);
 }
 
-.buttonList:focus {
+.buttonListActive {
+  width: 9em;
+  height: 2.5em;
+  border-radius: 1em;
+  border: 0.1px solid lightgray;
   color: var(--white);
   background-color: var(--third);
 }

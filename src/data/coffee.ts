@@ -9,7 +9,20 @@ export const DataCoffee: ICoffee[] = [
         itemName: "Espresso",
         topping: "Original",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
-        price: 10
+        price: [
+            {
+                size: "small",
+                price: 10
+            },
+            {
+                size: "medium",
+                price: 20
+            },
+            {
+                size: "large",
+                price: 30
+            }
+        ]
     },
     {
         id: "2",
@@ -19,7 +32,20 @@ export const DataCoffee: ICoffee[] = [
         itemName: "Cappucino",
         topping: "Original",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
-        price: 10
+        price: [
+            {
+                size: "small",
+                price: 10
+            },
+            {
+                size: "medium",
+                price: 20
+            },
+            {
+                size: "large",
+                price: 30
+            }
+        ]
     },
     {
         id: "3",
@@ -29,7 +55,20 @@ export const DataCoffee: ICoffee[] = [
         itemName: "Frappucino",
         topping: "With Cream",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
-        price: 10
+        price: [
+            {
+                size: "small",
+                price: 10
+            },
+            {
+                size: "medium",
+                price: 20
+            },
+            {
+                size: "large",
+                price: 30
+            }
+        ]
     },
     {
         id: "4",
@@ -39,6 +78,19 @@ export const DataCoffee: ICoffee[] = [
         itemName: "Espresso",
         topping: "With Milk",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
-        price: 10
+        price: [
+            {
+                size: "small",
+                price: 10
+            },
+            {
+                size: "medium",
+                price: 20
+            },
+            {
+                size: "large",
+                price: 30
+            }
+        ]
     }
 ]

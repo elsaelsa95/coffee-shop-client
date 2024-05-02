@@ -6,5 +6,10 @@ export interface ICoffee {
     itemName: string;
     topping: string;
     description: string;
+    price: IPriceList[]
+}
+
+export interface IPriceList {
+    size: string
     price: number
 }

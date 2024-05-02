@@ -7,12 +7,42 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/component/Button";
+import { useEffect, useState } from "react";
 
 export default function Detail() {
     const params = useParams()
     const detail = DataCoffee.find((c) => c.id == params.id)
 
-    const buttonSize = ["Small", "Medium", "Large"]
+    const [active, setActive] = useState("")
+    const [basicPrice, setBasicPrice] = useState(0)
+    const [quantity, setQuantity] = useState(0)
+    const [price, setPrice] = useState(0)
+
+    const changeBasicPrice = (size: any) => {
+        const findSize = detail!.price.find((x) => x.size == size)
+        setBasicPrice(findSize!.price)
+        setActive(findSize!.size)
+    }
+
+    const minus = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1)
+        }
+        else {
+            setQuantity(0)
+        }
+    }
+    const plus = () => {
+        setQuantity(quantity + 1)
+    }
+
+    const sumPrize = () => {
+        setPrice(basicPrice * quantity)
+    }
+
+    useEffect(() => {
+        sumPrize()
+    })
 
     return (
         <main className={style.container}>
@@ -42,28 +72,30 @@ export default function Detail() {
                             <small className={style.subtitle}>{detail.description}</small>
                         </section>
                         <section className={style.bottom}>
+                            <small><strong>Size</strong></small>
+                            <div className={style.size}>
+                                {detail.price.map((b) => {
+                                    return (
+                                        active == b.size ?
+                                            <Button className={style.buttonListActive} key={b.size} onClick={() => changeBasicPrice(b.size)}>{b.size}</Button> :
+                                            <Button className={style.buttonList} key={b.size} onClick={() => changeBasicPrice(b.size)}>{b.size}</Button>
+                                    )
+                                })}
+                            </div>
                             <div className={style.quantity}>
                                 <small><strong>Quantity</strong></small>
                                 <div className={style.quantity}>
-                                    <Button className={style.button}>-</Button>
-                                    <small>1</small>
-                                    <Button className={style.button}>+</Button>
+                                    <Button className={style.button} onClick={() => minus()}>-</Button>
+                                    <small>{quantity}</small>
+                                    <Button className={style.button} onClick={() => plus()}>+</Button>
                                 </div>
-                            </div>
-                            <small><strong>Size</strong></small>
-                            <div className={style.size}>
-                                {buttonSize.map((b) => {
-                                    return (
-                                        <Button className={style.buttonList} key={b}>{b}</Button>
-                                    )
-                                })}
                             </div>
                         </section>
                     </div>
                     <div className={style.add}>
                         <div>
                             <small className={style.subtitle}>Price</small>
-                            <p className={style.price}>$ {detail.price}</p>
+                            <p className={style.price}>$ {price}</p>
                         </div>
                         <Button>Add to cart</Button>
                     </div>
