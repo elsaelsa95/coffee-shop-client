@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import Form from "@/component/Form";
 import Button from "@/component/Button";
 import CardMenu from "@/component/CardMenu";
-import { DataCoffee } from "@/data/coffee";
 import { ICoffee } from "@/interfaces/Coffee";
 
 export default function Home() {
@@ -24,20 +23,54 @@ export default function Home() {
         setDataFilter(e)
     }
 
+    const getCoffeeLists = async () => {
+        try {
+            const result = await fetch(`http://localhost:8000/coffeeLists`);
+            const res = await result.json()
+            setData(res)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const getCoffeeListsByCategory = async () => {
+
+        if (text) {
+            try {
+                const result = await fetch(`http://localhost:8000/coffeeLists?category_like=${text}`);
+                const res = await result.json()
+                setData(res)
+
+            } catch (error) {
+                console.log(error)
+            }
+        } else {
+            try {
+                const result = await fetch(`http://localhost:8000/coffeeLists?category=${dataFilter}`);
+                const res = await result.json()
+                setData(res)
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }
+
     useEffect(() => {
         if (text == "") {
-            setData(DataCoffee)
+            getCoffeeLists()
         }
         else {
-            setData(DataCoffee.filter((c: any) => c.itemName.toLowerCase().includes(text) || c.category.toLowerCase().includes(text)))
+            getCoffeeListsByCategory()
         }
     }, [text])
 
     useEffect(() => {
         if (dataFilter == "All" || dataFilter == "") {
-            setData(DataCoffee)
+            getCoffeeLists()
         } else {
-            setData(DataCoffee.filter((d) => d.category == dataFilter))
+            getCoffeeListsByCategory()
         }
     }, [dataFilter])
 

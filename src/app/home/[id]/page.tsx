@@ -2,16 +2,32 @@
 
 import { useParams } from "next/navigation";
 import style from "./style.module.css";
-import { DataCoffee } from "@/data/coffee";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/component/Button";
 import { useEffect, useState } from "react";
+import { ICoffee } from "@/interfaces/Coffee";
 
 export default function Detail() {
     const params = useParams()
-    const detail = DataCoffee.find((c) => c.id == params.id)
+    const [detail, setDetail] = useState<ICoffee>()
+
+    const getCoffeeDetail = async () => {
+        try {
+            const result = await fetch(`http://localhost:8000/coffeeLists/${params.id}`);
+            const res = await result.json()
+            setDetail(res)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getCoffeeDetail()
+    }, [])
+
 
     const [active, setActive] = useState("")
     const [basicPrice, setBasicPrice] = useState(0)
@@ -43,6 +59,10 @@ export default function Detail() {
     useEffect(() => {
         sumPrize()
     })
+
+    const handleAddToChart = () => {
+        console.log(detail?.itemName, active, quantity, basicPrice, price)
+    }
 
     return (
         <main className={style.container}>
@@ -97,7 +117,7 @@ export default function Detail() {
                             <small className={style.subtitle}>Price</small>
                             <p className={style.price}>$ {price}</p>
                         </div>
-                        <Button>Add to cart</Button>
+                        <Button onClick={() => handleAddToChart()}>Add to cart</Button>
                     </div>
                 </>
                 : <p>Error</p>
