@@ -4,7 +4,79 @@
       "id": "fe553e06-0e52-4f13-9e50-b1f5feeed070",
       "firstName": "Erastus",
       "phoneNumber": "6168820313",
-      "point": 23
+      "point": 23,
+      "favorites": [
+        {
+          "id": "1",
+          "category": "Espresso",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+          "rating": 4.5,
+          "itemName": "Espresso",
+          "topping": "Original",
+          "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+          "price": [
+            {
+              "size": "small",
+              "price": 1
+            },
+            {
+              "size": "medium",
+              "price": 2
+            },
+            {
+              "size": "large",
+              "price": 3
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "category": "Cappucino",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+          "rating": 4.5,
+          "itemName": "Cappucino",
+          "topping": "Original",
+          "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+          "price": [
+            {
+              "size": "small",
+              "price": 1
+            },
+            {
+              "size": "medium",
+              "price": 2
+            },
+            {
+              "size": "large",
+              "price": 3
+            }
+          ]
+        }
+      ],
+      "history": {
+        "idHistory": "474cc61a-f0a1-4514-9ee0-d0d9368e95e2",
+        "date": "12/31/2023",
+        "description": [
+          {
+            "itemId": "1",
+            "itemName": "Espresso",
+            "itemSize": "large",
+            "itemPrice": 3,
+            "quantity": 2,
+            "totalPrice": 6
+          },
+          {
+            "itemId": "2",
+            "itemName": "Cappucino",
+            "itemSize": "large",
+            "itemPrice": 3,
+            "quantity": 1,
+            "totalPrice": 3
+          }
+        ],
+        "summary": 9,
+        "getPoint": 1
+      }
     },
     {
       "id": "e26fd65c-06d0-4059-b042-25e5f08ebc3f",
@@ -17,18 +89,6 @@
       "firstName": "Gordon",
       "phoneNumber": "5203463207",
       "point": 44
-    },
-    {
-      "id": "7c28bebc-178d-4bc6-ac39-924f5b4383c1",
-      "firstName": "Jacqui",
-      "phoneNumber": "9404689120",
-      "point": 22
-    },
-    {
-      "id": "11aa1222-16b2-47ac-9fed-0d834593a228",
-      "firstName": "Louie",
-      "phoneNumber": "7079057690",
-      "point": 13
     }
   ],
   "coffeeLists": [
@@ -121,47 +181,6 @@
         {
           "size": "large",
           "price": 3
-        }
-      ]
-    }
-  ],
-  "userFavorites": [
-    {
-      "userId": "fe553e06-0e52-4f13-9e50-b1f5feeed070",
-      "coffeeId": ["1", "2"]
-    },
-    {
-      "userId": "e26fd65c-06d0-4059-b042-25e5f08ebc3f",
-      "coffeeId": ["4", "2"]
-    }
-  ],
-  "userHistory": [
-    {
-      "userId": "fe553e06-0e52-4f13-9e50-b1f5feeed070",
-      "detail": [
-        {
-          "idHistory": "474cc61a-f0a1-4514-9ee0-d0d9368e95e2",
-          "date": "12/31/2023",
-          "description": [
-            {
-              "itemId": "1",
-              "itemName": "Espresso",
-              "itemSize": "large",
-              "itemPrice": 3,
-              "quantity": 2,
-              "totalPrice": 6
-            },
-            {
-              "itemId": "2",
-              "itemName": "Cappucino",
-              "itemSize": "large",
-              "itemPrice": 3,
-              "quantity": 1,
-              "totalPrice": 3
-            }
-          ],
-          "summary": 9,
-          "getPoint": 1
         }
       ]
     }

@@ -7,8 +7,17 @@ import Form from "@/component/Form";
 import Button from "@/component/Button";
 import CardMenu from "@/component/CardMenu";
 import { ICoffee } from "@/interfaces/Coffee";
+import { getUserDetail, selectUser } from "@/redux/reducers/user";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 export default function Home() {
+    const dispatch = useAppDispatch()
+    const userState = useAppSelector(selectUser)
+
+    useEffect(() => {
+        dispatch(getUserDetail("fe553e06-0e52-4f13-9e50-b1f5feeed070"))
+    }, [])
+
     const [data, setData] = useState<ICoffee[]>([])
 
     const [text, setText] = useState("");
@@ -35,7 +44,6 @@ export default function Home() {
     }
 
     const getCoffeeListsByCategory = async () => {
-
         if (text) {
             try {
                 const result = await fetch(`http://localhost:8000/coffeeLists?category_like=${text}`);
@@ -93,7 +101,7 @@ export default function Home() {
                     }}
                 />
                 <div className={style.title}>
-                    Good Morning
+                    Hello, {userState.user?.firstName}
                 </div>
                 <div className={style.subtitle}>
                     Grab your first coffee in the morning

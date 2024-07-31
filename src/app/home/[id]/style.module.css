@@ -9,6 +9,22 @@
   overflow-y: hidden;
 }
 
+.backButton {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  width: 5em;
+  height: 2em;
+  border-radius: 1em;
+  background-color: var(--white);
+}
+
+.backButton:hover {
+  background-color: var(--third);
+}
+
 .detail {
   padding: 1em;
   display: flex;

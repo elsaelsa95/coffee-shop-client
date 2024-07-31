@@ -1,20 +1,13 @@
+import { ICoffee } from "./Coffee"
+
 export interface IUser {
     id: string
-    fisrtName: string
+    firstName: string
     phoneNumber: string
     point: number
+    favorites: ICoffee[]
+    history: IHistory[]
 }
-
-export interface IUserFavorite {
-    userId: string
-    coffeeId: string
-}
-
-export interface userHistory {
-    userId: string
-    detail: IHistory[]
-}
-
 export interface IHistory {
     idHistory: string
     date: string

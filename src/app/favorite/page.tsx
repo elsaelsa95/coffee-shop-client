@@ -4,14 +4,18 @@ import BottomBar from "@/component/BottomBar";
 import style from "./style.module.css";
 import Button from "@/component/Button";
 import CardMenu from "@/component/CardMenu";
-import { DataCoffee } from "@/data/coffee";
 import { useRouter } from "next/navigation";
+import { useAppSelector } from "@/redux/hooks";
+import { selectUser } from "@/redux/reducers/user";
 
 export default function Favorite() {
     const router = useRouter()
     const back = () => {
         router.push("/home")
     }
+
+    const userState = useAppSelector(selectUser)
+
     return (
         <main className={style.container}>
             <section className={style.backBar}>
@@ -19,8 +23,8 @@ export default function Favorite() {
                 <h1 className={style.title}>My Favorite</h1>
             </section>
             <section className={style.favorite}>
-                {DataCoffee ?
-                    DataCoffee.map((c) => {
+                {userState.user.favorites ?
+                    userState.user.favorites.map((c) => {
                         return (
                             <CardMenu
                                 key={c.id}

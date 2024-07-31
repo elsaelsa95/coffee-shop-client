@@ -1,6 +1,6 @@
 "use client"
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import style from "./style.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,11 @@ import { useEffect, useState } from "react";
 import { ICoffee } from "@/interfaces/Coffee";
 
 export default function Detail() {
+    const router = useRouter()
+    const back = () => {
+        router.push("/home")
+    }
+
     const params = useParams()
     const [detail, setDetail] = useState<ICoffee>()
 
@@ -62,10 +67,12 @@ export default function Detail() {
 
     const handleAddToChart = () => {
         console.log(detail?.itemName, active, quantity, basicPrice, price)
+        back()
     }
 
     return (
         <main className={style.container}>
+            <Button className={style.backButton} onClick={() => back()}> Back </Button>
             {detail ?
                 <>
                     <Image
