@@ -15,6 +15,7 @@ export default function Favorite() {
     }
 
     const userState = useAppSelector(selectUser)
+    const favorite = userState.user.favorites
 
     return (
         <main className={style.container}>
@@ -23,8 +24,8 @@ export default function Favorite() {
                 <h1 className={style.title}>My Favorite</h1>
             </section>
             <section className={style.favorite}>
-                {userState.user.favorites ?
-                    userState.user.favorites.map((c) => {
+                {favorite ?
+                    favorite.map((c) => {
                         return (
                             <CardMenu
                                 key={c.id}

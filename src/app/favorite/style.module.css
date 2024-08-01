@@ -37,4 +37,13 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   align-self: center;
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+@media only screen and (max-height: 700px) {
+  .favorite {
+    max-height: 80vh;
+  }
 }

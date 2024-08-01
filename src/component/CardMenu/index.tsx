@@ -32,6 +32,8 @@ export default function CardMenu({ id, image, rating, name, description }: ICard
                         height: "auto",
                         borderRadius: "20px"
                     }}
+                    placeholder="empty"
+                    priority
                 />
             </div>
             <Card className={style.card}>
@@ -39,7 +41,7 @@ export default function CardMenu({ id, image, rating, name, description }: ICard
                     <div className={style.top}>
                         <div className={style.rating}>
                             <small>
-                                Rating this drink {rating} <FontAwesomeIcon icon={faStar} />
+                                Rating {rating} <FontAwesomeIcon icon={faStar} />
                             </small>
                         </div>
                     </div>

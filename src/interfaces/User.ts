@@ -12,7 +12,9 @@ export interface IHistory {
     idHistory: string
     date: string
     description: IDetailHistory[]
-    summary: number
+    subtotal: number
+    redeemPoint: number
+    total: number
     getPoint: number
 }
 

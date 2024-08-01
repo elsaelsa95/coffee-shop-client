@@ -4,12 +4,12 @@
       "id": "fe553e06-0e52-4f13-9e50-b1f5feeed070",
       "firstName": "Erastus",
       "phoneNumber": "6168820313",
-      "point": 23,
+      "point": 2.4,
       "favorites": [
         {
           "id": "1",
           "category": "Espresso",
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+          "image": "/image/coffee.jpeg",
           "rating": 4.5,
           "itemName": "Espresso",
           "topping": "Original",
@@ -32,7 +32,7 @@
         {
           "id": "2",
           "category": "Cappucino",
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+          "image": "/image/coffee.jpeg",
           "rating": 4.5,
           "itemName": "Cappucino",
           "topping": "Original",
@@ -53,30 +53,100 @@
           ]
         }
       ],
-      "history": {
-        "idHistory": "474cc61a-f0a1-4514-9ee0-d0d9368e95e2",
-        "date": "12/31/2023",
-        "description": [
-          {
-            "itemId": "1",
-            "itemName": "Espresso",
-            "itemSize": "large",
-            "itemPrice": 3,
-            "quantity": 2,
-            "totalPrice": 6
-          },
-          {
-            "itemId": "2",
-            "itemName": "Cappucino",
-            "itemSize": "large",
-            "itemPrice": 3,
-            "quantity": 1,
-            "totalPrice": 3
-          }
-        ],
-        "summary": 9,
-        "getPoint": 1
-      }
+      "history": [
+        {
+          "idHistory": "474cc5e2",
+          "date": "31/12/2023",
+          "description": [
+            {
+              "itemId": "1",
+              "itemName": "Espresso",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 2,
+              "totalPrice": 6
+            },
+            {
+              "itemId": "1",
+              "itemName": "Espresso",
+              "itemSize": "medium",
+              "itemPrice": 2,
+              "quantity": 2,
+              "totalPrice": 4
+            },
+            {
+              "itemId": "1",
+              "itemName": "Espresso",
+              "itemSize": "small",
+              "itemPrice": 1,
+              "quantity": 1,
+              "totalPrice": 1
+            },
+            {
+              "itemId": "2",
+              "itemName": "Cappucino",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "2",
+              "itemName": "Cappucino",
+              "itemSize": "medium",
+              "itemPrice": 2,
+              "quantity": 3,
+              "totalPrice": 6
+            },
+            {
+              "itemId": "2",
+              "itemName": "Cappucino",
+              "itemSize": "small",
+              "itemPrice": 1,
+              "quantity": 2,
+              "totalPrice": 2
+            },
+            {
+              "itemId": "3",
+              "itemName": "Frappucino",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "4",
+              "itemName": "Latte",
+              "itemSize": "small",
+              "itemPrice": 1,
+              "quantity": 1,
+              "totalPrice": 1
+            }
+          ],
+          "subtotal": 26,
+          "redeemPoint": 0,
+          "total": 26,
+          "getPoint": 2.8
+        },
+        {
+          "idHistory": "474cc61a",
+          "date": "01/02/2023",
+          "description": [
+            {
+              "itemId": "1",
+              "itemName": "Espresso",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 2,
+              "totalPrice": 6
+            }
+          ],
+          "subtotal": 6,
+          "redeemPoint": 1,
+          "total": 5,
+          "getPoint": 0.6
+        }
+      ]
     },
     {
       "id": "e26fd65c-06d0-4059-b042-25e5f08ebc3f",
@@ -95,7 +165,7 @@
     {
       "id": "1",
       "category": "Espresso",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+      "image": "/image/coffee.jpeg",
       "rating": 4.5,
       "itemName": "Espresso",
       "topping": "Original",
@@ -118,7 +188,7 @@
     {
       "id": "2",
       "category": "Cappucino",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+      "image": "/image/coffee.jpeg",
       "rating": 4.5,
       "itemName": "Cappucino",
       "topping": "Original",
@@ -141,7 +211,7 @@
     {
       "id": "3",
       "category": "Frappucino",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+      "image": "/image/coffee.jpeg",
       "rating": 4.5,
       "itemName": "Frappucino",
       "topping": "With Cream",
@@ -164,7 +234,7 @@
     {
       "id": "4",
       "category": "Latte",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6zk7z7oGEhgivW4qRotFp8APLTfb_Yq-OgMExdHhRtXFxMyBBtT_Ik4vYqD4Ga-gxTA&usqp=CAU",
+      "image": "/image/coffee.jpeg",
       "rating": 4.6,
       "itemName": "Espresso",
       "topping": "With Milk",
