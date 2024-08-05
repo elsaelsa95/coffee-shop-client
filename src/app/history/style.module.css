@@ -82,6 +82,13 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
 .history::-webkit-scrollbar,
 .modal::-webkit-scrollbar {
   width: 0px;

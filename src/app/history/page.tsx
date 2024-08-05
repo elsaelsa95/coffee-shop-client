@@ -11,7 +11,7 @@ import { useState } from "react";
 import { IHistory } from "@/interfaces/User";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-
+import Image from "next/image";
 
 export default function History() {
     const userState = useAppSelector(selectUser)
@@ -69,13 +69,16 @@ export default function History() {
                     </div>
                     {detail.description.map((d, i) => {
                         return (
-                            <div key={i}>
-                                <div className={style.description}>
-                                    <p>{d.itemName}</p>
-                                    <p>{d.itemSize}</p>
-                                </div>
-                                <div className={style.price}>
-                                    <p>$ {d.itemPrice}</p> x <p>{d.quantity}</p> = <p>$ {d.totalPrice}</p>
+                            <div key={i} className={style.grid}>
+                                <Image width={100} height={100} src={d.itemImage} alt={d.itemName} priority />
+                                <div style={{ "width": "100%" }}>
+                                    <div className={style.description}>
+                                        <p>{d.itemName}</p>
+                                        <p>{d.itemSize}</p>
+                                    </div>
+                                    <div className={style.price}>
+                                        <p>$ {d.itemPrice}</p> x <p>{d.quantity}</p> = <p>$ {d.totalPrice}</p>
+                                    </div>
                                 </div>
                             </div>
                         )

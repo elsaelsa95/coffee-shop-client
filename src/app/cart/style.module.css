@@ -1,0 +1,140 @@
+.container {
+  composes: container from global;
+  background-color: whitesmoke;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.backBar {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--first);
+}
+
+.backButton {
+  width: 5em;
+  height: 2em;
+  border-radius: 1em;
+  background-color: var(--white);
+}
+
+.backButton:hover {
+  background-color: var(--third);
+}
+
+.title {
+  color: var(--white);
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.empty {
+  font-size: 2em;
+  color: var(--first);
+  text-align: center;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--white);
+  color: var(--first);
+  gap: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--first);
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--white);
+  color: var(--first);
+  padding: 1em;
+  gap: 0.5em;
+  position: absolute;
+  bottom: 2.5em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: end;
+  gap: 0.5em;
+}
+
+.point {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttonPoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 5px;
+  background-color: var(--third);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.note {
+  color: red;
+  font-size: 12px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3em;
+  border-radius: 1em;
+  background-color: var(--third);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+.inActiveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3em;
+  border-radius: 1em;
+  background-color: lightgray;
+  color: var(--white);
+  border: none;
+  cursor: not-allowed;
+}

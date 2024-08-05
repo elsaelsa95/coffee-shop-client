@@ -61,6 +61,7 @@
             {
               "itemId": "1",
               "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "large",
               "itemPrice": 3,
               "quantity": 2,
@@ -69,6 +70,7 @@
             {
               "itemId": "1",
               "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "medium",
               "itemPrice": 2,
               "quantity": 2,
@@ -77,6 +79,7 @@
             {
               "itemId": "1",
               "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "small",
               "itemPrice": 1,
               "quantity": 1,
@@ -85,6 +88,7 @@
             {
               "itemId": "2",
               "itemName": "Cappucino",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "large",
               "itemPrice": 3,
               "quantity": 1,
@@ -93,6 +97,7 @@
             {
               "itemId": "2",
               "itemName": "Cappucino",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "medium",
               "itemPrice": 2,
               "quantity": 3,
@@ -101,6 +106,7 @@
             {
               "itemId": "2",
               "itemName": "Cappucino",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "small",
               "itemPrice": 1,
               "quantity": 2,
@@ -109,6 +115,7 @@
             {
               "itemId": "3",
               "itemName": "Frappucino",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "large",
               "itemPrice": 3,
               "quantity": 1,
@@ -117,6 +124,7 @@
             {
               "itemId": "4",
               "itemName": "Latte",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "small",
               "itemPrice": 1,
               "quantity": 1,
@@ -135,6 +143,7 @@
             {
               "itemId": "1",
               "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
               "itemSize": "large",
               "itemPrice": 3,
               "quantity": 2,

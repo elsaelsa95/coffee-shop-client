@@ -10,3 +10,16 @@
   border: none;
   cursor: pointer;
 }
+
+.inActiveButton {
+  font-size: 12px;
+  color: var(--first);
+  background-color: lightgray;
+  color: var(--white);
+  width: 50%;
+  height: 40px;
+  padding: 0 2%;
+  border-radius: 10px;
+  border: none;
+  cursor: not-allowed;
+}

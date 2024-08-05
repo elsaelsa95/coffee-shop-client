@@ -8,6 +8,8 @@ import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/component/Button";
 import { useEffect, useState } from "react";
 import { ICoffee } from "@/interfaces/Coffee";
+import { useAppDispatch } from "@/redux/hooks";
+import { updateCart } from "@/redux/reducers/cart";
 
 export default function Detail() {
     const router = useRouter()
@@ -34,7 +36,7 @@ export default function Detail() {
     }, [])
 
 
-    const [active, setActive] = useState("")
+    const [itemSize, setItemSize] = useState("")
     const [basicPrice, setBasicPrice] = useState(0)
     const [quantity, setQuantity] = useState(0)
     const [price, setPrice] = useState(0)
@@ -42,7 +44,7 @@ export default function Detail() {
     const changeBasicPrice = (size: any) => {
         const findSize = detail!.price.find((x) => x.size == size)
         setBasicPrice(findSize!.price)
-        setActive(findSize!.size)
+        setItemSize(findSize!.size)
     }
 
     const minus = () => {
@@ -65,9 +67,20 @@ export default function Detail() {
         sumPrize()
     })
 
+    const dispatch = useAppDispatch()
+
     const handleAddToChart = () => {
-        console.log(detail?.itemName, active, quantity, basicPrice, price)
         back()
+        dispatch(updateCart(
+            {
+                itemId: detail?.id,
+                itemName: detail?.itemName,
+                itemImage: detail?.image,
+                itemSize: itemSize,
+                itemPrice: basicPrice,
+                quantity: quantity,
+                totalPrice: price
+            }))
     }
 
     return (
@@ -103,7 +116,7 @@ export default function Detail() {
                             <div className={style.size}>
                                 {detail.price.map((b) => {
                                     return (
-                                        active == b.size ?
+                                        itemSize == b.size ?
                                             <Button className={style.buttonListActive} key={b.size} onClick={() => changeBasicPrice(b.size)}>{b.size}</Button> :
                                             <Button className={style.buttonList} key={b.size} onClick={() => changeBasicPrice(b.size)}>{b.size}</Button>
                                     )
@@ -124,7 +137,9 @@ export default function Detail() {
                             <small className={style.subtitle}>Price</small>
                             <p className={style.price}>$ {price}</p>
                         </div>
-                        <Button onClick={() => handleAddToChart()}>Add to cart</Button>
+                        {price ?
+                            <Button onClick={() => handleAddToChart()} active={true}>Add to cart</Button>
+                            : <Button active={false}>Add to cart</Button>}
                     </div>
                 </>
                 : <p>Error</p>

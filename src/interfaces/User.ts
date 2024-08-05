@@ -21,6 +21,7 @@ export interface IHistory {
 export interface IDetailHistory {
     itemId: string
     itemName: string
+    itemImage: string
     itemSize: string
     itemPrice: number
     quantity: number
