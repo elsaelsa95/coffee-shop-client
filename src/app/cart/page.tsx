@@ -49,10 +49,13 @@ export default function Cart() {
     const totalPurchase = subtotal - point
     const getPoint = Number((subtotal / 9).toFixed(1))
 
+    let newHistory: {}
+    let currentPoint: number
+
     const dispatch = useAppDispatch()
     const payment = () => {
         const id = (Math.random() + 1).toString(36).substring(4);
-        const newHistory = {
+        newHistory = {
             idHistory: id,
             date: new Date(),
             description: cartList,
@@ -61,13 +64,34 @@ export default function Cart() {
             total: totalPurchase,
             getPoint: getPoint
         }
-        const currentPoint = userDetail.point - point + getPoint
+        currentPoint = Number((userDetail.point - point + getPoint).toFixed(1))
 
-        console.log(newHistory)
-        console.log(currentPoint)
+        updateUserDetail(userDetail.id)
         dispatch(deleteCart())
         back()
     }
+
+    const updateUserDetail = async (id: string) => {
+        try {
+            const response = await fetch(`http://localhost:8000/users/${id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    point: currentPoint,
+                    history: [
+                        ...userDetail.history,
+                        newHistory
+                    ]
+                })
+            })
+            return response
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <main className={style.container}>
             <section className={style.backBar}>
@@ -75,9 +99,9 @@ export default function Cart() {
                 <h1 className={style.title}>My Cart</h1>
             </section>
             <section className={style.cart}>
-                {cartList.length ? cartList.map((c) => {
+                {cartList.length ? cartList.map((c, i) => {
                     return (
-                        <div key={c.itemId} className={style.cartList}>
+                        <div key={i} className={style.cartList}>
                             <Image width={100} height={100} src={c.itemImage} alt={c.itemName} priority />
                             <p>{c.quantity}x</p>
                             <div className={style.detail}>

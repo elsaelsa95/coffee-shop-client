@@ -4,7 +4,7 @@
       "id": "fe553e06-0e52-4f13-9e50-b1f5feeed070",
       "firstName": "Erastus",
       "phoneNumber": "6168820313",
-      "point": 2.4,
+      "point": 2.3,
       "favorites": [
         {
           "id": "1",
@@ -154,6 +154,43 @@
           "redeemPoint": 1,
           "total": 5,
           "getPoint": 0.6
+        },
+        {
+          "idHistory": "lfpqdwlti",
+          "date": "2024-08-06T09:36:16.764Z",
+          "description": [
+            {
+              "itemId": "1",
+              "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "1",
+              "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
+              "itemSize": "medium",
+              "itemPrice": 2,
+              "quantity": 1,
+              "totalPrice": 2
+            },
+            {
+              "itemId": "4",
+              "itemName": "Espresso",
+              "itemImage": "/image/coffee.jpeg",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            }
+          ],
+          "subtotal": 8,
+          "redeemPoint": 1,
+          "total": 7,
+          "getPoint": 0.9
         }
       ]
     },

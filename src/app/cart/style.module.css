@@ -91,7 +91,7 @@
   flex-direction: row;
   gap: 1em;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .buttonPoint {
