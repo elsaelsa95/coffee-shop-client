@@ -3,7 +3,10 @@ import { ICoffee } from "./Coffee"
 export interface IUser {
     id: string
     firstName: string
+    lastName: string
     phoneNumber: string
+    email: string
+    photoProfile: string
     point: number
     favorites: ICoffee[]
     history: IHistory[]

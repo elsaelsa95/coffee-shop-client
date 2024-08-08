@@ -1,7 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button from "../Button";
 import style from "./style.module.css";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export interface IForm {
     label: string;
@@ -26,7 +23,7 @@ export default function Form({
 }: IForm) {
     return (
         <form className={style.form}>
-            <label>{label}</label>
+            <label className={style.label}>{label}</label>
             <input className={style.input}
                 type={type}
                 placeholder={placeholder}

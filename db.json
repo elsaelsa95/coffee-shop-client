@@ -3,7 +3,10 @@
     {
       "id": "fe553e06-0e52-4f13-9e50-b1f5feeed070",
       "firstName": "Erastus",
+      "lastName": "Bouttier",
       "phoneNumber": "6168820313",
+      "email": "erastus.b@gmail.com",
+      "photoProfile": "/image/coffee.jpeg",
       "point": 2.3,
       "favorites": [
         {
@@ -197,14 +200,24 @@
     {
       "id": "e26fd65c-06d0-4059-b042-25e5f08ebc3f",
       "firstName": "Thaddus",
+      "lastName": "Ackerman",
       "phoneNumber": "2903877923",
-      "point": 27
+      "email": "thaddus.a@gmail.com",
+      "photoProfile": "/image/coffee.jpeg",
+      "point": 0,
+      "favorites": [],
+      "history": []
     },
     {
       "id": "ad0a690a-17b0-4f4d-8343-ef478c081e36",
       "firstName": "Gordon",
+      "lastName": "Armin",
       "phoneNumber": "5203463207",
-      "point": 44
+      "email": "gordon.a@gmail.com",
+      "photoProfile": "/image/coffee.jpeg",
+      "point": 0,
+      "favorites": [],
+      "history": []
     }
   ],
   "coffeeLists": [

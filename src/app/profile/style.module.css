@@ -1,0 +1,32 @@
+.container {
+  composes: container from global;
+  background-color: whitesmoke;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.photoProfile {
+  width: 100%;
+  min-height: 30vh;
+  padding: 25px;
+  background-color: var(--first);
+}
+
+.photo {
+  width: 50%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.userDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  min-height: 60vh;
+  padding: 25px;
+  color: var(--first);
+}
