@@ -4,8 +4,9 @@ export interface IUser {
     id: string
     firstName: string
     lastName: string
-    phoneNumber: string
     email: string
+    password: string
+    phoneNumber: string
     photoProfile: string
     point: number
     favorites: ICoffee[]

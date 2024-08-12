@@ -3,12 +3,13 @@
 import BottomBar from "@/component/BottomBar";
 import style from "./style.module.css";
 import Button from "@/component/Button";
-import { useAppSelector } from "@/redux/hooks";
-import { selectUser } from "@/redux/reducers/user";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { getUserDetail, selectUser } from "@/redux/reducers/user";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IUser } from "@/interfaces/User";
 import Form from "@/component/Form";
+import { useRouter } from "next/navigation";
 
 export default function Profile() {
     const user = useAppSelector(selectUser)
@@ -16,8 +17,7 @@ export default function Profile() {
 
     const [curr, setCurr] = useState<IUser>(userDetail)
 
-    console.log(curr)
-
+    const dispatch = useAppDispatch()
     const updateUserDetail = async (id: string) => {
         try {
             const response = await fetch(`http://localhost:8000/users/${id}`, {
@@ -40,6 +40,15 @@ export default function Profile() {
         } catch (error) {
             console.log(error)
         }
+    }
+
+    useEffect(() => {
+        dispatch(getUserDetail(userDetail.id))
+    }, [])
+
+    const router = useRouter()
+    const handleSignOut = () => {
+        router.push("/")
     }
 
     return (
@@ -119,7 +128,7 @@ export default function Profile() {
                     disabled
                 />
             </section>
-            <Button active>Sign Out</Button>
+            <Button active onClick={() => handleSignOut()}>Sign Out</Button>
             <BottomBar />
         </main>
     )

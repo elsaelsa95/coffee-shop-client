@@ -32,7 +32,7 @@ export default function Home() {
         <p>Coffee Bean</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, necessitatibus atque consequuntur eius impedit vel maxime, corporis id aliquam cum qui, maiores ipsum tempora a labore amet ab aut dolorem.</p>
       </div>
-      <Button onClick={() => handleGoToSignInPage} active>Get Started</Button>
+      <Button onClick={() => handleGoToSignInPage()} active>Get Started</Button>
     </main>
   );
 }

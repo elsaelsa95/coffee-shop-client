@@ -6,8 +6,9 @@
       "lastName": "Bouttier",
       "phoneNumber": "6168820313",
       "email": "erastus.b@gmail.com",
+      "password": "erastus123",
       "photoProfile": "/image/coffee.jpeg",
-      "point": 2.3,
+      "point": 3.8,
       "favorites": [
         {
           "id": "1",
@@ -203,6 +204,7 @@
       "lastName": "Ackerman",
       "phoneNumber": "2903877923",
       "email": "thaddus.a@gmail.com",
+      "password": "thaddus123",
       "photoProfile": "/image/coffee.jpeg",
       "point": 0,
       "favorites": [],
@@ -214,6 +216,7 @@
       "lastName": "Armin",
       "phoneNumber": "5203463207",
       "email": "gordon.a@gmail.com",
+      "password": "gordon123",
       "photoProfile": "/image/coffee.jpeg",
       "point": 0,
       "favorites": [],

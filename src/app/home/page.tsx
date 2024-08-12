@@ -12,11 +12,8 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 export default function Home() {
     const dispatch = useAppDispatch()
-    const userState = useAppSelector(selectUser)
-
-    useEffect(() => {
-        dispatch(getUserDetail("fe553e06-0e52-4f13-9e50-b1f5feeed070"))
-    }, [])
+    const user = useAppSelector(selectUser)
+    const userDetail = user.user
 
     const [data, setData] = useState<ICoffee[]>([])
 
@@ -82,6 +79,10 @@ export default function Home() {
         }
     }, [dataFilter])
 
+    useEffect(() => {
+        dispatch(getUserDetail(userDetail.id))
+    }, [])
+
     return (
         <main className={style.container}>
             <div className={style.top}>
@@ -101,7 +102,7 @@ export default function Home() {
                     }}
                 />
                 <div className={style.title}>
-                    Hello, {userState.user?.firstName}
+                    Hello, {userDetail.firstName}
                 </div>
                 <div className={style.subtitle}>
                     Grab your first coffee in the morning

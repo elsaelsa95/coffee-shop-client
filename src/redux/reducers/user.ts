@@ -12,7 +12,11 @@ const initialState: SignInState = {
     user: {
         id: "",
         firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
         phoneNumber: "",
+        photoProfile: "",
         point: 0,
         favorites: [],
         history: []
