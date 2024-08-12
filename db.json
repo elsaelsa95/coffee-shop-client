@@ -221,6 +221,38 @@
       "point": 0,
       "favorites": [],
       "history": []
+    },
+    {
+      "id": "v7bet1mb",
+      "firstName": "Mochi",
+      "lastName": "Van Power",
+      "phoneNumber": "08123456789",
+      "email": "mochi.v@gmail.com",
+      "password": "mochi123",
+      "photoProfile": "",
+      "point": 0.1,
+      "favorites": [],
+      "history": [
+        {
+          "idHistory": "nof34iutl",
+          "date": "2024-08-12T08:03:23.663Z",
+          "description": [
+            {
+              "itemId": "3",
+              "itemName": "Frappucino",
+              "itemImage": "/image/coffee.jpeg",
+              "itemSize": "small",
+              "itemPrice": 1,
+              "quantity": 1,
+              "totalPrice": 1
+            }
+          ],
+          "subtotal": 1,
+          "redeemPoint": 0,
+          "total": 1,
+          "getPoint": 0.1
+        }
+      ]
     }
   ],
   "coffeeLists": [

@@ -42,23 +42,24 @@ export default function History() {
                 <h1 className={style.title}>My History</h1>
             </section>
             <section className={style.history}>
-                {history.map((h, i) => {
-                    return (
-                        <Card className={style.historyCard} key={i}>
-                            <>
-                                <div>
-                                    <div> Date: {h.date}</div>
-                                    <div> Total Purchase: $ {h.total}</div>
-                                    <div> Get Point: $ {h.getPoint}</div>
-                                </div>
-                                <div>
-                                    <p>Completed</p>
-                                    <Button className={style.detail} onClick={() => openDetail(h.idHistory)}>Detail</Button>
-                                </div>
-                            </>
-                        </Card>
-                    )
-                })}
+                {history.length ?
+                    history.map((h, i) => {
+                        return (
+                            <Card className={style.historyCard} key={i}>
+                                <>
+                                    <div>
+                                        <div> Date: {h.date}</div>
+                                        <div> Total Purchase: $ {h.total}</div>
+                                        <div> Get Point: $ {h.getPoint}</div>
+                                    </div>
+                                    <div>
+                                        <p>Completed</p>
+                                        <Button className={style.detail} onClick={() => openDetail(h.idHistory)}>Detail</Button>
+                                    </div>
+                                </>
+                            </Card>
+                        )
+                    }) : <div className={style.empty}>Empty</div>}
             </section>
             {openModal && detail ?
                 <div className={style.modal}>

@@ -4,9 +4,10 @@ import Form from "@/component/Form";
 import style from "./style.module.css";
 import { useState } from "react";
 import Button from "@/component/Button";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { getUserDetail, selectUser } from "@/redux/reducers/user";
+import { useAppDispatch } from "@/redux/hooks";
+import { getUserDetail } from "@/redux/reducers/user";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function SignIn() {
     const [email, setEmail] = useState("");
@@ -71,6 +72,7 @@ export default function SignIn() {
             />
             <Button onClick={() => handleSignIn()} active>Sign In</Button>
             {error ? <h6 style={{ "color": "white" }}>Invalid Email or Password</h6> : <></>}
+            <h6 style={{ "color": "white" }}>Don't have account ? <Link href={"/register"} style={{ "color": "var(--third)" }}>Register</Link></h6>
         </main>
     )
 }

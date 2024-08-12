@@ -1,0 +1,5 @@
+.container {
+  composes: container from global;
+  text-align: center;
+  gap: 30px;
+}

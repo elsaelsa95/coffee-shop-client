@@ -117,6 +117,12 @@
   padding-top: 1em;
 }
 
+.empty {
+  font-size: 2em;
+  color: var(--first);
+  text-align: center;
+}
+
 @media only screen and (max-height: 700px) {
   .history {
     max-height: 80vh;
