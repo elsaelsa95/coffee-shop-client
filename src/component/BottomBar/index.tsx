@@ -21,12 +21,12 @@ export default function BottomBar({
             href: "/home",
             isActive: pathname === "/home",
         },
-        {
-            title: "Favorite",
-            icon: <FontAwesomeIcon icon={faHeart} className={style.isActive} />,
-            href: "/favorite",
-            isActive: pathname === "/favorite",
-        },
+        // {
+        //     title: "Favorite",
+        //     icon: <FontAwesomeIcon icon={faHeart} className={style.isActive} />,
+        //     href: "/favorite",
+        //     isActive: pathname === "/favorite",
+        // },
         {
             title: "History",
             icon: <FontAwesomeIcon icon={faHistory} className={style.isActive} />,

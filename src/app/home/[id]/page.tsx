@@ -101,7 +101,7 @@ export default function Detail() {
                     <div className={style.detail}>
                         <div className={style.title}>
                             <p><strong>{detail.itemName}</strong></p>
-                            <FontAwesomeIcon icon={faHeart} />
+                            {/* <FontAwesomeIcon icon={faHeart} /> */}
                         </div>
                         <small className={style.subtitle}>{detail.topping}</small>
                         <small className={style.rating}>
