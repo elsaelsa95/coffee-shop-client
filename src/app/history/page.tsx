@@ -7,15 +7,16 @@ import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/redux/hooks";
 import { selectUser } from "@/redux/reducers/user";
 import Card from "@/component/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IHistory } from "@/interfaces/User";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 export default function History() {
-    const userState = useAppSelector(selectUser)
-    const history = userState.user.history
+    const user = useAppSelector(selectUser)
+    const userDetail = user.user
+    const history = user.user.history
 
     const router = useRouter()
     const back = () => {
@@ -35,6 +36,15 @@ export default function History() {
         setOpenModal(!openModal)
     }
 
+    useEffect(() => {
+        if (!userDetail.id) {
+            router.push("/signIn")
+            return
+        }
+    }, [])
+
+    if (!userDetail.id) return null
+
     return (
         <main className={style.container}>
             <section className={style.backBar}>
@@ -42,7 +52,7 @@ export default function History() {
                 <h1 className={style.title}>My History</h1>
             </section>
             <section className={style.history}>
-                {history.length ?
+                {history && history.length ?
                     history.map((h, i) => {
                         return (
                             <Card className={style.historyCard} key={i}>

@@ -9,6 +9,7 @@ import CardMenu from "@/component/CardMenu";
 import { ICoffee } from "@/interfaces/Coffee";
 import { getUserDetail, selectUser } from "@/redux/reducers/user";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
     const dispatch = useAppDispatch()
@@ -82,6 +83,16 @@ export default function Home() {
     useEffect(() => {
         dispatch(getUserDetail(userDetail.id))
     }, [])
+
+    const router = useRouter()
+    useEffect(() => {
+        if (!userDetail.id) {
+            router.push("/signIn")
+            return
+        }
+    }, [])
+
+    if (!userDetail.id) return null
 
     return (
         <main className={style.container}>

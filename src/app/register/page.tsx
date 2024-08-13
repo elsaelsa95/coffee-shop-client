@@ -14,19 +14,24 @@ export default function Register() {
     const router = useRouter()
 
     const [error, setError] = useState(false)
+    const [errorEmpty, setErrorEmpty] = useState(false)
 
     const handleRegister = () => {
-        const result = fetch(`http://localhost:8000/users`)
-        result
-            .then((res) => res.json())
-            .then((data) => {
-                const checkEmail = data.find((d: any) => d.email === email)
-                if (checkEmail) {
-                    setError(true)
-                } else {
-                    createUser()
-                }
-            })
+        if (!email || !password) {
+            setErrorEmpty(true)
+        } else {
+            const result = fetch(`http://localhost:8000/users`)
+            result
+                .then((res) => res.json())
+                .then((data) => {
+                    const checkEmail = data.find((d: any) => d.email === email)
+                    if (checkEmail) {
+                        setError(true)
+                    } else {
+                        createUser()
+                    }
+                })
+        }
     }
 
     const createUser = async () => {
@@ -67,6 +72,12 @@ export default function Register() {
                 onChange={(e: any) => {
                     setEmail(e.target.value);
                 }}
+                onKeyPress={(e: any) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleRegister()
+                    }
+                }}
             />
             <Form
                 label="Password"
@@ -76,9 +87,16 @@ export default function Register() {
                 onChange={(e: any) => {
                     setPassword(e.target.value);
                 }}
+                onKeyPress={(e: any) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleRegister()
+                    }
+                }}
             />
             <Button onClick={() => handleRegister()} active>Register</Button>
             {error ? <h6 style={{ "color": "white" }}>Email already used</h6> : <></>}
+            {errorEmpty ? <h6 style={{ "color": "white" }}>Email or Password is Required</h6> : <></>}
             <h6 style={{ "color": "white" }}>Already have account ? <Link href={"/signIn"} style={{ "color": "var(--third)" }}>Sign In</Link></h6>
         </main>
     )

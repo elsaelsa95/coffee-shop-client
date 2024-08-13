@@ -7,6 +7,7 @@ import CardMenu from "@/component/CardMenu";
 import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/redux/hooks";
 import { selectUser } from "@/redux/reducers/user";
+import { useEffect } from "react";
 
 export default function Favorite() {
     const router = useRouter()
@@ -14,8 +15,18 @@ export default function Favorite() {
         router.push("/home")
     }
 
-    const userState = useAppSelector(selectUser)
-    const favorite = userState.user.favorites
+    const user = useAppSelector(selectUser)
+    const userDetail = user.user
+    const favorite = user.user.favorites
+
+    useEffect(() => {
+        if (!userDetail.id) {
+            router.push("/signIn")
+            return
+        }
+    }, [])
+
+    if (!userDetail.id) return null
 
     return (
         <main className={style.container}>
@@ -33,7 +44,6 @@ export default function Favorite() {
                                 image={c.image}
                                 rating={c.rating}
                                 name={c.itemName}
-                                description={c.topping}
                             />
                         )
                     }) : <h1>No Data</h1>}

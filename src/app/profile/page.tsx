@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { IUser } from "@/interfaces/User";
 import Form from "@/component/Form";
 import { useRouter } from "next/navigation";
+import { clearUserSession } from "@/redux/reducers/session";
 
 export default function Profile() {
     const user = useAppSelector(selectUser)
@@ -46,10 +47,19 @@ export default function Profile() {
         dispatch(getUserDetail(userDetail.id))
     }, [])
 
-    const router = useRouter()
     const handleSignOut = () => {
-        router.push("/")
+        dispatch(clearUserSession())
     }
+
+    const router = useRouter()
+    useEffect(() => {
+        if (!userDetail.id) {
+            router.push("/signIn")
+            return
+        }
+    }, [])
+
+    if (!userDetail.id) return null
 
     return (
         <main className={style.container}>

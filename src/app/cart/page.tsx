@@ -7,7 +7,7 @@ import { deleteCart, selectCart } from "@/redux/reducers/cart"
 import Button from "@/component/Button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { selectUser } from "@/redux/reducers/user";
 
 export default function Cart() {
@@ -92,6 +92,15 @@ export default function Cart() {
         }
     }
 
+    useEffect(() => {
+        if (!userDetail.id) {
+            router.push("/signIn")
+            return
+        }
+    }, [])
+
+    if (!userDetail.id) return null
+
     return (
         <main className={style.container}>
             <section className={style.backBar}>
@@ -99,7 +108,7 @@ export default function Cart() {
                 <h1 className={style.title}>My Cart</h1>
             </section>
             <section className={style.cart}>
-                {cartList.length ? cartList.map((c, i) => {
+                {cartList && cartList.length ? cartList.map((c, i) => {
                     return (
                         <div key={i} className={style.cartList}>
                             <Image width={100} height={100} src={c.itemImage} alt={c.itemName} priority />
