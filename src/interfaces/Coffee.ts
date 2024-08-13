@@ -4,7 +4,6 @@ export interface ICoffee {
     image: string;
     rating: number;
     itemName: string;
-    topping: string;
     description: string;
     price: IPriceList[]
 }

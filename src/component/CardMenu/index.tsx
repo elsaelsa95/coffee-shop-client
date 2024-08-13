@@ -11,9 +11,8 @@ export interface ICardMenu {
     image: string;
     rating: number;
     name: string;
-    description: string
 }
-export default function CardMenu({ id, image, rating, name, description }: ICardMenu) {
+export default function CardMenu({ id, image, rating, name }: ICardMenu) {
     const router = useRouter()
     const detail = () => {
         router.push(`home/${id}`)
@@ -29,8 +28,9 @@ export default function CardMenu({ id, image, rating, name, description }: ICard
                     alt="image"
                     style={{
                         width: "100%",
-                        height: "auto",
-                        borderRadius: "20px"
+                        maxHeight: "10em",
+                        borderRadius: "1em",
+                        background: "var(--second)"
                     }}
                     placeholder="empty"
                     priority
@@ -46,10 +46,7 @@ export default function CardMenu({ id, image, rating, name, description }: ICard
                         </div>
                     </div>
                     <div className={style.bottom}>
-                        <div>
-                            <p><strong>{name}</strong></p>
-                            <small>{description}</small>
-                        </div>
+                        <strong>{name}</strong>
                         <Button className={style.button} onClick={() => detail()}><FontAwesomeIcon icon={faPlus} /></Button>
                     </div>
                 </div>

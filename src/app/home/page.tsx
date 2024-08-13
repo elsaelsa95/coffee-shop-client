@@ -24,7 +24,7 @@ export default function Home() {
         setText(e)
     };
 
-    const buttonFilter = ["All", "Espresso", "Cappucino", "Frappucino", "Latte"]
+    const buttonFilter = ["All", "Americano", "Frappe", "Non Coffee", "Food", "Other"]
     const filter = (e: string) => {
         setDataFilter(e)
     }
@@ -43,7 +43,7 @@ export default function Home() {
     const getCoffeeListsByCategory = async () => {
         if (text) {
             try {
-                const result = await fetch(`http://localhost:8000/coffeeLists?category_like=${text}`);
+                const result = await fetch(`http://localhost:8000/coffeeLists?itemName_like=${text}`);
                 const res = await result.json()
                 setData(res)
 
@@ -105,7 +105,7 @@ export default function Home() {
                     Hello, {userDetail.firstName}
                 </div>
                 <div className={style.subtitle}>
-                    Grab your first coffee in the morning
+                    Taste the Difference, Feel the Love
                 </div>
             </div>
             <div className={style.buttonGroup}>
@@ -124,7 +124,6 @@ export default function Home() {
                             image={c.image}
                             rating={c.rating}
                             name={c.itemName}
-                            description={c.topping}
                         />
                     )
                 })}
