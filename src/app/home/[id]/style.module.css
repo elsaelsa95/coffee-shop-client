@@ -59,6 +59,7 @@
 .top {
   display: flex;
   flex-direction: column;
+  max-height: 20vh;
   gap: 1em;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -137,7 +138,7 @@
   bottom: -1%;
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-width: 600px) {
   .top {
     max-height: 15vh;
   }

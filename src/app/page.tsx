@@ -18,7 +18,7 @@ export default function Home() {
         width={1000}
         height={1000}
         alt="hero-image"
-        style={{ width: "100%", height: "auto", borderRadius: "1em" }}
+        style={{ width: "100%", height: "50%", borderRadius: "1em" }}
       />
       <div className={styles.title}>
         <div className={styles.title1}>

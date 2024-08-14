@@ -66,8 +66,9 @@
   scrollbar-width: none;
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-width: 600px) {
   .list {
+    padding: 15px;
     max-height: 55vh;
   }
 }

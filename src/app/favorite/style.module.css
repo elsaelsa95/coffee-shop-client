@@ -42,7 +42,7 @@
   scrollbar-width: none;
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-width: 600px) {
   .favorite {
     max-height: 80vh;
   }

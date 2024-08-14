@@ -9,6 +9,7 @@
   position: absolute;
   bottom: 10px;
   border-top: 1px solid lightgray;
+  background-color: var(--white);
 }
 
 .navigationItems a[data-is-active="true"] {
