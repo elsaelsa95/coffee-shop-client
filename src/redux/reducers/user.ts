@@ -26,7 +26,7 @@ const initialState: SignInState = {
 }
 
 export const getUserDetail = createAsyncThunk("fetchUser", async (id: string) => {
-    const data = await fetch(`http://localhost:8000/users/${id}`)
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${id}`)
     return data.json()
 })
 

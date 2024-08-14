@@ -7,10 +7,66 @@
       "phoneNumber": "6168820313",
       "email": "erastus.b@gmail.com",
       "password": "erastus123",
-      "photoProfile": "/image/coffee.png",
-      "point": 3.8,
+      "photoProfile": "/image/coffee.jpeg",
+      "point": 5.5,
       "favorites": [],
-      "history": []
+      "history": [
+        {
+          "idHistory": "bki1uf1d",
+          "date": "2024-08-14T04:50:07.454Z",
+          "description": [
+            {
+              "itemId": "1",
+              "itemName": "Caffe Americano",
+              "itemImage": "/image/iced-americano.png",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "6",
+              "itemName": "Oat Aren Frappe",
+              "itemImage": "/image/oat-aren-frappe.png",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "11",
+              "itemName": "Lemon Tea",
+              "itemImage": "/image/lemon-tea.png",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "15",
+              "itemName": "Beef Sausage Croissant",
+              "itemImage": "/image/beef-sausage-croissant.png",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            },
+            {
+              "itemId": "18",
+              "itemName": "Mineral Water",
+              "itemImage": "/image/mineral-water.png",
+              "itemSize": "large",
+              "itemPrice": 3,
+              "quantity": 1,
+              "totalPrice": 3
+            }
+          ],
+          "subtotal": 15,
+          "redeemPoint": 0,
+          "total": 15,
+          "getPoint": 1.7
+        }
+      ]
     }
   ],
   "coffeeLists": [

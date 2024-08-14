@@ -18,24 +18,20 @@ export default function SignIn() {
 
     const [error, setError] = useState(false)
 
-    const handleSignIn = () => {
-        const result = fetch(`http://localhost:8000/users`)
-        result
-            .then((res) => res.json())
-            .then((data) => {
-                const checkEmail = data.find((d: any) => d.email === email)
-                if (checkEmail) {
-                    const checkPass = checkEmail.password === password
-                    if (checkPass) {
-                        dispatch(getUserDetail(checkEmail.id))
-                        router.push("/home")
-                    } else {
-                        setError(true)
-                    }
-                } else {
-                    setError(true)
-                }
-            })
+    const handleSignIn = async () => {
+        const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`)
+        const data = await result.json()
+
+        const checkEmail = await data.find((d: any) => d.email === email)
+        if (checkEmail) {
+            const checkPass = await checkEmail.password === password
+            if (checkPass) {
+                await dispatch(getUserDetail(checkEmail.id))
+                router.push("/home")
+            } else {
+                setError(true)
+            }
+        }
     }
 
     return (

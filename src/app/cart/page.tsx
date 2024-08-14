@@ -73,7 +73,7 @@ export default function Cart() {
 
     const updateUserDetail = async (id: string) => {
         try {
-            const response = await fetch(`http://localhost:8000/users/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

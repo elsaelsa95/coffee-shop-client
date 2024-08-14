@@ -22,7 +22,7 @@ export default function Detail() {
 
     const getCoffeeDetail = async () => {
         try {
-            const result = await fetch(`http://localhost:8000/coffeeLists/${params.id}`);
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/coffeeLists/${params.id}`);
             const res = await result.json()
             setDetail(res)
 
@@ -95,7 +95,9 @@ export default function Detail() {
                         alt="image"
                         style={{
                             width: "100%",
-                            height: "auto"
+                            minHeight: "10em",
+                            maxHeight: "30em",
+                            background: "var(--first)"
                         }}
                     />
                     <div className={style.detail}>

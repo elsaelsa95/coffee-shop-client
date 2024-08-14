@@ -32,7 +32,7 @@ export default function Home() {
 
     const getCoffeeLists = async () => {
         try {
-            const result = await fetch(`http://localhost:8000/coffeeLists`);
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/coffeeLists`);
             const res = await result.json()
             setData(res)
 
@@ -44,7 +44,7 @@ export default function Home() {
     const getCoffeeListsByCategory = async () => {
         if (text) {
             try {
-                const result = await fetch(`http://localhost:8000/coffeeLists?itemName_like=${text}`);
+                const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/coffeeLists?itemName_like=${text}`);
                 const res = await result.json()
                 setData(res)
 
@@ -53,7 +53,7 @@ export default function Home() {
             }
         } else {
             try {
-                const result = await fetch(`http://localhost:8000/coffeeLists?category=${dataFilter}`);
+                const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/coffeeLists?category=${dataFilter}`);
                 const res = await result.json()
                 setData(res)
 

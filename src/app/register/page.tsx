@@ -16,28 +16,26 @@ export default function Register() {
     const [error, setError] = useState(false)
     const [errorEmpty, setErrorEmpty] = useState(false)
 
-    const handleRegister = () => {
+    const handleRegister = async () => {
         if (!email || !password) {
             setErrorEmpty(true)
         } else {
-            const result = fetch(`http://localhost:8000/users`)
-            result
-                .then((res) => res.json())
-                .then((data) => {
-                    const checkEmail = data.find((d: any) => d.email === email)
-                    if (checkEmail) {
-                        setError(true)
-                    } else {
-                        createUser()
-                    }
-                })
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`)
+            const data = await result.json()
+
+            const checkEmail = data.find((d: any) => d.email === email)
+            if (checkEmail) {
+                setError(true)
+            } else {
+                createUser()
+            }
         }
     }
 
     const createUser = async () => {
         try {
             const id = (Math.random() + 1).toString(36).substring(4);
-            const response = await fetch(`http://localhost:8000/users`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -49,7 +47,7 @@ export default function Register() {
                     "phoneNumber": "",
                     "email": email,
                     "password": password,
-                    "photoProfile": "",
+                    "photoProfile": "/image/coffee.jpeg",
                     "point": 0,
                     "favorites": [],
                     "history": []
