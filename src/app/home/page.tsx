@@ -70,7 +70,7 @@ export default function Home() {
         else {
             getCoffeeListsByCategory()
         }
-    }, [text, getCoffeeListsByCategory])
+    }, [text])
 
     useEffect(() => {
         if (dataFilter == "All" || dataFilter == "") {
@@ -78,7 +78,7 @@ export default function Home() {
         } else {
             getCoffeeListsByCategory()
         }
-    }, [dataFilter, getCoffeeListsByCategory])
+    }, [dataFilter])
 
     useEffect(() => {
         dispatch(getUserDetail(userDetail.id))
