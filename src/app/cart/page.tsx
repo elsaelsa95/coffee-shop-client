@@ -97,7 +97,7 @@ export default function Cart() {
             router.push("/signIn")
             return
         }
-    }, [])
+    }, [router, userDetail.id])
 
     if (!userDetail.id) return null
 

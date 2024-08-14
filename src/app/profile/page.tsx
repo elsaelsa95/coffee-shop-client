@@ -45,7 +45,7 @@ export default function Profile() {
 
     useEffect(() => {
         dispatch(getUserDetail(userDetail.id))
-    }, [])
+    }, [dispatch, userDetail.id])
 
     const handleSignOut = () => {
         dispatch(clearUserSession())
@@ -57,7 +57,7 @@ export default function Profile() {
             router.push("/")
             return
         }
-    }, [])
+    }, [router, userDetail.id])
 
     if (!userDetail.id) return null
 

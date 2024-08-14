@@ -70,7 +70,7 @@ export default function Home() {
         else {
             getCoffeeListsByCategory()
         }
-    }, [text])
+    }, [text, getCoffeeListsByCategory])
 
     useEffect(() => {
         if (dataFilter == "All" || dataFilter == "") {
@@ -78,11 +78,11 @@ export default function Home() {
         } else {
             getCoffeeListsByCategory()
         }
-    }, [dataFilter])
+    }, [dataFilter, getCoffeeListsByCategory])
 
     useEffect(() => {
         dispatch(getUserDetail(userDetail.id))
-    }, [])
+    }, [dispatch, userDetail.id])
 
     const router = useRouter()
     useEffect(() => {
@@ -90,7 +90,7 @@ export default function Home() {
             router.push("/signIn")
             return
         }
-    }, [])
+    }, [router, userDetail.id])
 
     if (!userDetail.id) return null
 

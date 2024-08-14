@@ -24,7 +24,7 @@ export default function Favorite() {
             router.push("/signIn")
             return
         }
-    }, [])
+    }, [router, userDetail.id])
 
     if (!userDetail.id) return null
 

@@ -33,7 +33,7 @@ export default function Detail() {
 
     useEffect(() => {
         getCoffeeDetail()
-    }, [])
+    }, [getCoffeeDetail])
 
 
     const [itemSize, setItemSize] = useState("")

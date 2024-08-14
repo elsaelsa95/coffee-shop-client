@@ -41,7 +41,7 @@ export default function History() {
             router.push("/signIn")
             return
         }
-    }, [])
+    }, [router, userDetail.id])
 
     if (!userDetail.id) return null
 

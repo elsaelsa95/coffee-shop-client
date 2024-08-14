@@ -68,7 +68,7 @@ export default function SignIn() {
             />
             <Button onClick={() => handleSignIn()} active>Sign In</Button>
             {error ? <h6 style={{ "color": "white" }}>Invalid Email or Password</h6> : <></>}
-            <h6 style={{ "color": "white" }}>Don't have account ? <Link href={"/register"} style={{ "color": "var(--third)" }}>Register</Link></h6>
+            <h6 style={{ "color": "white" }}>Don&apos;t have account ? <Link href={"/register"} style={{ "color": "var(--third)" }}>Register</Link></h6>
         </main>
     )
 }
