@@ -38,7 +38,7 @@ export default function Cart() {
     }
 
     const plus = () => {
-        if (point < Math.floor(userDetail.point)) {
+        if (point < Math.floor(userDetail.point) && point < subtotal) {
             setPoint(point + 1)
         }
         else (
@@ -139,7 +139,7 @@ export default function Cart() {
                     <p>Get Point:</p>
                     <p>{getPoint}</p>
                 </div>
-                {totalPurchase ? <Button className={style.button} onClick={() => payment()}>Payment</Button> :
+                {totalPurchase >= 0 ? <Button className={style.button} onClick={() => payment()}>Payment</Button> :
                     <Button className={style.inActiveButton}>Payment</Button>
                 }
             </section>
