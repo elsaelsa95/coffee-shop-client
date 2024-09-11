@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { selectUser } from "@/redux/reducers/user";
+import Swal from "sweetalert2";
 
 export default function Cart() {
     const router = useRouter()
@@ -86,9 +87,22 @@ export default function Cart() {
                     ]
                 })
             })
+            Swal.fire({
+                icon: "success",
+                title: "Success",
+                text: "Payment Success",
+                confirmButtonText: "Close",
+                width: "20em"
+            })
             return response
         } catch (error) {
-            console.log(error)
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+                confirmButtonText: "Close",
+                width: "20em"
+            })
         }
     }
 

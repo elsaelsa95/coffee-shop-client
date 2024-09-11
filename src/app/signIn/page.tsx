@@ -8,6 +8,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import { getUserDetail } from "@/redux/reducers/user";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Swal from "sweetalert2";
 
 export default function SignIn() {
     const [email, setEmail] = useState("");
@@ -15,8 +16,6 @@ export default function SignIn() {
 
     const router = useRouter()
     const dispatch = useAppDispatch()
-
-    const [error, setError] = useState(false)
 
     const handleSignIn = async () => {
         const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`)
@@ -27,10 +26,31 @@ export default function SignIn() {
             const checkPass = await checkEmail.password === password
             if (checkPass) {
                 await dispatch(getUserDetail(checkEmail.id))
+                Swal.fire({
+                    icon: "success",
+                    title: "Success",
+                    text: "Login Success",
+                    confirmButtonText: "Close",
+                    width: "20em"
+                })
                 router.push("/home")
             } else {
-                setError(true)
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Invalid Email or Password",
+                    confirmButtonText: "Close",
+                    width: "20em"
+                })
             }
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid Email or Password",
+                confirmButtonText: "Close",
+                width: "20em"
+            })
         }
     }
 
@@ -67,7 +87,6 @@ export default function SignIn() {
                 }}
             />
             <Button onClick={() => handleSignIn()} active>Sign In</Button>
-            {error ? <h6 style={{ "color": "white" }}>Invalid Email or Password</h6> : <></>}
             <h6 style={{ "color": "white" }}>Don&apos;t have account ? <Link href={"/register"} style={{ "color": "var(--third)" }}>Register</Link></h6>
         </main>
     )
