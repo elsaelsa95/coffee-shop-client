@@ -1,0 +1,39 @@
+.container {
+  composes: container from global;
+  background-color: var(--white);
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.top {
+  width: 100%;
+  min-height: 20vh;
+  padding: 25px;
+  background-color: var(--first);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  padding: 30px 0 0 0;
+}
+
+.mood {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 0px 15px;
+    gap: 25px;
+    max-height: 75vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.moodImage {
+  display: flex;
+  flex-direction: column;
+  color: var(--first);
+  align-items: center;
+}

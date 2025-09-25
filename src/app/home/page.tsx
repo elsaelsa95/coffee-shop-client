@@ -10,6 +10,7 @@ import { ICoffee } from "@/interfaces/Coffee";
 import { getUserDetail, selectUser } from "@/redux/reducers/user";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
     const dispatch = useAppDispatch()
@@ -117,6 +118,8 @@ export default function Home() {
                 </div>
                 <div className={style.subtitle}>
                     Taste the Difference, Feel the Love
+                    <br></br>
+                    Need Suggestion? <Link href="/ai">Ask AI</Link>
                 </div>
             </div>
             <div className={style.buttonGroup}>

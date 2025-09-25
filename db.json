@@ -76,7 +76,7 @@
       "image": "/image/iced-americano.png",
       "rating": 5,
       "itemName": "Caffe Americano",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Classic black coffee with bold flavor.",
       "price": [
         {
           "size": "small",
@@ -98,7 +98,7 @@
       "image": "/image/grapefruit-americano.png",
       "rating": 4.5,
       "itemName": "Grapefruit Americano",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Americano with refreshing grapefruit twist.",
       "price": [
         {
           "size": "small",
@@ -120,7 +120,7 @@
       "image": "/image/lemonade-americano.png",
       "rating": 4.8,
       "itemName": "Lemonade Americano",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "A zesty mix of espresso and lemonade.",
       "price": [
         {
           "size": "small",
@@ -142,7 +142,7 @@
       "image": "/image/jasmine-americano.png",
       "rating": 4.7,
       "itemName": "Jasmine Americano",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Americano infused with floral jasmine aroma.",
       "price": [
         {
           "size": "small",
@@ -164,7 +164,7 @@
       "image": "/image/coconut-frappe.png",
       "rating": 4.5,
       "itemName": "Coconut Frappe",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Creamy blend of coconut and ice, tropical style.",
       "price": [
         {
           "size": "small",
@@ -186,7 +186,7 @@
       "image": "/image/oat-aren-frappe.png",
       "rating": 4.3,
       "itemName": "Oat Aren Frappe",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Oat milk with palm sugar blend, smooth and earthy.",
       "price": [
         {
           "size": "small",
@@ -208,7 +208,7 @@
       "image": "/image/coffee-frappe.png",
       "rating": 4.5,
       "itemName": "Coffee Frappe",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Classic iced coffee frappe, rich and frothy.",
       "price": [
         {
           "size": "small",
@@ -230,7 +230,7 @@
       "image": "/image/matcha-frappe.png",
       "rating": 4.5,
       "itemName": "Matcha Frappe",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Japanese green tea frappe, creamy and slightly bitter.",
       "price": [
         {
           "size": "small",
@@ -252,7 +252,7 @@
       "image": "/image/chocolate-frappe.png",
       "rating": 4.9,
       "itemName": "Chocolate Frappe",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Sweet and indulgent chocolate blend.",
       "price": [
         {
           "size": "small",
@@ -274,7 +274,7 @@
       "image": "/image/green-tea.png",
       "rating": 4.5,
       "itemName": "Green Tea",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Simple brewed green tea, light and earthy.",
       "price": [
         {
           "size": "small",
@@ -296,7 +296,7 @@
       "image": "/image/lemon-tea.png",
       "rating": 4.9,
       "itemName": "Lemon Tea",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Black tea with fresh lemon.",
       "price": [
         {
           "size": "small",
@@ -318,7 +318,7 @@
       "image": "/image/mango-tea.png",
       "rating": 4.5,
       "itemName": "Mango Tea",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Fruity tea with tropical mango flavor.",
       "price": [
         {
           "size": "small",
@@ -340,7 +340,7 @@
       "image": "/image/jasmine-tea.png",
       "rating": 4.1,
       "itemName": "Jasmine Tea",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Floral-scented tea, smooth and delicate.",
       "price": [
         {
           "size": "small",
@@ -362,7 +362,7 @@
       "image": "/image/butter-croissant.png",
       "rating": 4.5,
       "itemName": "Butter Croissant",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Flaky, buttery pastry.",
       "price": [
         {
           "size": "small",
@@ -384,7 +384,7 @@
       "image": "/image/beef-sausage-croissant.png",
       "rating": 4.9,
       "itemName": "Beef Sausage Croissant",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Savory croissant with beef sausage filling.",
       "price": [
         {
           "size": "small",
@@ -406,7 +406,7 @@
       "image": "/image/ham-and-cheese-sandwich.png",
       "rating": 4.8,
       "itemName": "Ham and Cheese Sandwich",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Classic savory sandwich with melted cheese.",
       "price": [
         {
           "size": "small",
@@ -428,7 +428,7 @@
       "image": "/image/smoked-chicken-sandwich.png",
       "rating": 4.5,
       "itemName": "Smoked Chicken Sandwich",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Sandwich with smoked chicken and fresh gree",
       "price": [
         {
           "size": "small",
@@ -450,7 +450,7 @@
       "image": "/image/mineral-water.png",
       "rating": 4.6,
       "itemName": "Mineral Water",
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officiis temporibus repudiandae impedit sunt totam illo aperiam dolores maxime unde! Officiis, labore. Consequatur quia, atque ipsum ex repellendus pariatur quaerat excepturi tempora, id, praesentium voluptas culpa voluptate eligendi quae cumque similique tempore qui iusto nostrum! Minima repudiandae earum voluptas odio.",
+      "description": "Pure and refreshing bottled water.",
       "price": [
         {
           "size": "small",
