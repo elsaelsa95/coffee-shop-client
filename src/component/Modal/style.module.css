@@ -1,0 +1,16 @@
+.modal {
+  align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 90%;
+  /* height: 15vh; */
+  max-height: 65vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  color: var(--first);
+  background-color:var(--second);
+  position: fixed;
+  top:25%;
+  z-index: 1;
+}

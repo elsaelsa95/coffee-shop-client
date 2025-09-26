@@ -5,13 +5,29 @@ import style from "./style.module.css";
 import BottomBar from "@/component/BottomBar";
 import { useState } from "react";
 import { getCafeRecomendation } from "@/mastra/action";
+import Modal from "@/component/Modal";
 
 export default function Ai() {
     const [result, setResult] = useState<string | null>(null);
-   
+    const [modalAi, setModalAi] = useState(false);
+    const [loading, setLoading] = useState(false)
+
     async function handleSubmit(need: string) {
+        setLoading(true);
+        setModalAi(true)
+
         const res = await getCafeRecomendation(need);
-        setResult(res);
+        
+        setResult(res)
+        if (result) {
+            setLoading(false)
+        }
+    }
+
+    async function closeModal(){
+        setResult(null)
+        setLoading(false)
+        setModalAi(false)
     }
 
     console.log(result)
@@ -19,9 +35,22 @@ export default function Ai() {
         <main className={style.container}>
             <div className={style.top}>
                 <div className={style.title}>
-                    What's do you need today ?
+                    What do you need today ?
                 </div>
             </div>
+            {result ?
+             <Modal> 
+                <div className={style.modal}>
+                    <div className={style.closeModal} onClick={()=>closeModal()}>X</div>
+                    <div className={style.point}>{result}</div>
+                </div>
+            </Modal> : loading ?
+            <Modal>
+                <div className={style.modal}>
+                    <div className={style.closeModal} onClick={()=>closeModal()}>X</div>
+                    <div className={style.point}>Loading</div>
+                </div>
+            </Modal> : <></>}
             <div className={style.mood}>
                 <div className={style.moodImage} onClick={()=> handleSubmit("energy boost")}>
                     <Image

@@ -37,3 +37,18 @@
   color: var(--first);
   align-items: center;
 }
+
+.modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.closeModal {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.point {
+  white-space: pre-line;
+}
